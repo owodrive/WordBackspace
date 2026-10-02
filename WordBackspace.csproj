@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>WordBackspace</RootNamespace>
+    <AssemblyName>WordBackspace</AssemblyName>
+    <Version>1.0.0</Version>
+    <!-- Keep System.Text.Json reflection-based serialization for trimmed publishes. -->
+    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+  </PropertyGroup>
+
+  <!-- Github\ is a source snapshot for publishing; keep it out of the build. -->
+  <ItemGroup>
+    <Compile Remove="Github\**\*.cs" />
+  </ItemGroup>
+
+</Project>
